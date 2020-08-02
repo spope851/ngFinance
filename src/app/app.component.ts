@@ -61,7 +61,7 @@ constructor(private service: FinanceServiceService){}
     this.service.search(this.keyword)
     .subscribe(data =>{
       console.log(data);
-      let searchdata = Object.keys(data["bestMatches"]).map(e=>data["bestMatches"][e]);
+      let searchdata = data["bestMatches"];
       for (let i = 0; i < searchdata.length; i++) {
         this.searchResults.push({symbol: searchdata[i]["1. symbol"], name: searchdata[i]["2. name"]})
       }
