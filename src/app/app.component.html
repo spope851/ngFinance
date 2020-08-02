@@ -1,0 +1,39 @@
+
+<div class='card'>
+  <div class='card-header'>  
+    {{title}}
+  </div>
+  <div class="card-body"><br />
+  
+    <input (change)="onChange($event)" (keyup)="onKeyup($event)" class="form-control" type="text" placeholder="Search..." list="searchresults" autofocus/>
+    <datalist id="searchresults">
+      <option *ngFor="let i of searchResults" value="{{i.symbol | uppercase}}">{{i.name | titlecase}}</option>
+    </datalist>
+
+    <br />
+
+    <div class="form-group row" id="timeframe">
+      <label class="col-sm-6 col-form-label" for="timeframe">Timeframe:</label>
+      <div class="col-sm-6">
+        <select (change)="onTimeChange($event.target.value)" class="form-control form-control-sm" name="timeframe">
+          <option id="{{timeframes[timeframe.id].id}}" value="{{timeframes[timeframe.id].timeframe}}" selected="{{timeframes[timeframe.id].selected}}" *ngFor="let timeframe of timeframes">{{timeframes[timeframe.id].label}}</option>
+        </select>
+      </div>  
+    </div>
+
+    <br />
+
+    <canvas
+      baseChart
+      [chartType]="'bar'"
+      [datasets]="chartData"
+      [options]="chartOptions"
+      [legend]="chartLegend"
+      [labels]="chartLabels">
+    </canvas>
+
+  </div>
+</div>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
