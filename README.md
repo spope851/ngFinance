@@ -28,7 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## node_modules not included
 
-must run the following upon installation:
+must run the following three commands upon installation:
   npm install
   npm install ng2-charts
   npm install chart.js
