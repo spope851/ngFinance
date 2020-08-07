@@ -8,7 +8,8 @@ import { HttpClient } from '@angular/common/http'
 export class FinanceServiceService {
 
   urlBeg = 'https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords='
-  urlEnd = '&apikey=4AE4U7UBEMCL5PUF'
+  urlEnd = '&apikey=/*your Alpha Vantage key here*/'
+  //go to www.alphavantage.co to get your free api key
   dailyBeg = 'https://www.alphavantage.co/query?outputsize=full&function=TIME_SERIES_DAILY&symbol='
   constructor(private http: HttpClient) { }
 
