@@ -26,6 +26,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## No node_modules
+## node_modules not included
 
-must run npm install before using this repo
+must run the following upon installation:
+  npm install
+  npm install ng2-charts
+  npm install chart.js
