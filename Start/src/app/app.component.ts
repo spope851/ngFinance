@@ -17,4 +17,14 @@ export class AppComponent implements OnInit{
         {id:6, timeframe: 1288, label:'5 Years', selected: false},
         {id:7, timeframe: undefined, label:'Max', selected: false}
       ];
+  
+  onKeyup(key: Array<any>){
+    console.log(key);
+  }
+  onChange(event: Array<any>){
+    console.log(event);
+  }
+  onTimeChange(timeframe: number){
+    console.log(timeframe);
+  }
 }
