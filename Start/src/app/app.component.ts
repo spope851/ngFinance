@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
   title = 'ngFinance';
   timeframes = [
         {id:0, timeframe: 0, label:'1 Day', selected: false},
