@@ -6,7 +6,7 @@ import { FinanceServiceService } from './services/finance-service.service';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'test';
+  title = 'ngFinance';
   searchResults = [];
   keyword: string = '';
 
