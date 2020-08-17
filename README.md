@@ -1,8 +1,8 @@
 # IMPORTANT: node_modules not included
   ## must run the following three commands before serving ng serve:
-    ### npm install
-    ### npm install ng2-charts
-    ### npm install chart.js
+     npm install
+     npm install ng2-charts
+     npm install chart.js
 
 ### This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
 
