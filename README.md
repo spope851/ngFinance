@@ -1,6 +1,11 @@
-# Test
+## node_modules not included
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
+must run the following three commands upon installation:
+  npm install
+  npm install ng2-charts
+  npm install chart.js
+
+# This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
 
 ## Development server
 
@@ -25,10 +30,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## node_modules not included
-
-must run the following three commands upon installation:
-  npm install
-  npm install ng2-charts
-  npm install chart.js
