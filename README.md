@@ -1,4 +1,4 @@
-# IMPORTANT  must run the following commands before ng serve:
+# IMPORTANT  must run the following commands after cloning:
      npm install
      npm install ng2-charts
      npm install chart.js
