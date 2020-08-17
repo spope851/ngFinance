@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FinanceServiceService } from './services/finance-service.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
   title = 'test';
   searchResults = [];
   keyword: string = '';
@@ -13,7 +13,6 @@ export class AppComponent implements OnInit{
   date$ = [];
   lineData$ = [];
   barData$ = [];
-  timeframes = [];
   dailyData = [];
   lineCount: number;
 
@@ -36,12 +35,7 @@ export class AppComponent implements OnInit{
   public chartLegend = true;
   public chartData = [{data: this.lineData$, label: 'Price', yAxisID: 'right-y-axis', type: 'line'},
                       {data: this.barData$, label: 'Volume', yAxisID: 'left-y-axis'}];
-
-constructor(private service: FinanceServiceService){}
-
-  ngOnInit(){
-    this.title='Finance'
-    this.timeframes = [
+  timeframes = [
       {id:0, timeframe: 0, label:'1 Day', selected: false},
       {id:1, timeframe: 4, label:'1 Week', selected: false},
       {id:2, timeframe: 20, label:'1 Month', selected: false},
@@ -51,7 +45,8 @@ constructor(private service: FinanceServiceService){}
       {id:6, timeframe: 1288, label:'5 Years', selected: false},
       {id:7, timeframe: undefined, label:'Max', selected: false}
     ];
-  }
+  
+constructor(private service: FinanceServiceService){}
   
   onKeyup(key: Array<any>){
     console.log(key);
